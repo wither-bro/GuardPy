@@ -22,4 +22,10 @@ pub const MessageCache = struct {
 
         return msg;
     }
-};
+}; 
+
+export fn allocate_message_buffer(count: usize) [*]MessageCache {
+    const allocator = std.heap.page_allocator;
+    const slice = allocator.alloc(MessageCache, count) catch return @ptrFromInt(0);
+    return slice.ptr;
+}
