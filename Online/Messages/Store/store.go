@@ -2,7 +2,7 @@ package store
 
 import (
 	"sync"
-	"GuardPy/Online/Messages/Message"
+	"Online/Messages/Message"
 )
 
 type Store struct {
