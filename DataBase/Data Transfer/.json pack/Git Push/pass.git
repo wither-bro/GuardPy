@@ -1,0 +1,3 @@
+git add .json\ pack/pass.json
+git commit -m "chore: update session passport and access tokens"
+git push origin master
