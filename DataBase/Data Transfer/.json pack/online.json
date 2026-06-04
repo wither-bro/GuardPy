@@ -1,0 +1,38 @@
+{
+  "online_meta": {
+    "version": "1.0.0",
+    "sync_mode": "atomic_fast",
+    "timestamp": "2026-06-04T22:55:00Z"
+  },
+  "connection": {
+    "server_endpoint": "ws://127.0.0.1:8080/sync",
+    "reconnect_interval_ms": 100,
+    "buffer_size_bytes": 1048576,
+    "timeout_sec": 5
+  },
+  "stream": {
+    "active": true,
+    "priority_queue": "high",
+    "batch_process": true,
+    "compression": "none",
+    "flush_mode": "manual"
+  },
+  "nodes": {
+    "local_id": "guardpy_node_01",
+    "peer_list": [
+      "127.0.0.1:9091",
+      "127.0.0.1:9092"
+    ],
+    "health_check_ms": 50
+  },
+  "transport": {
+    "protocol": "binary_direct",
+    "header_size": 32,
+    "payload_limit": 65536
+  },
+  "runtime": {
+    "threads": 4,
+    "memory_mapping": "enabled",
+    "zero_copy": true
+  }
+}
