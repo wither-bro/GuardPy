@@ -1,0 +1,19 @@
+// Data Base/Bibliotics/Zig Requests/Pack/resources.json
+{
+  "version": "5.0.0",
+  "name": "ZigRequestsPack",
+  "resources": {
+    "session_timeout": 3600,
+    "max_connections": 128,
+    "paths": {
+      "cache": "./cache",
+      "logs": "./logs",
+      "temp": "./temp"
+    },
+    "features": [
+      "auto_cleanup",
+      "memory_optimization",
+      "integrity_check"
+    ]
+  }
+}
