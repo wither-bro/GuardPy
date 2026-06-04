@@ -1,0 +1,26 @@
+{
+  "action_meta": {
+    "version": "1.0.0",
+    "queue_priority": "top"
+  },
+  "current_tasks": [
+    {
+      "task_id": "proc_001",
+      "target_file": "buffer_seg_09.bin",
+      "action_type": "move",
+      "destination": "Data Transfer/Processed/",
+      "authorized_by": "Zig_Security_Kernel"
+    },
+    {
+      "task_id": "proc_002",
+      "target_file": "log_dump_04.log",
+      "action_type": "encrypt_and_archive",
+      "destination": "Data Transfer/Outgoing/",
+      "authorized_by": "Go_Network"
+    }
+  ],
+  "execution_flags": {
+    "auto_delete_after": true,
+    "verify_integrity": true
+  }
+}
