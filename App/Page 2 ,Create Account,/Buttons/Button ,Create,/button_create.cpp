@@ -38,6 +38,12 @@ public:
         }
     }
 
+    void press() {
+        if (isActive) {
+            
+        }
+    }
+
     bool isClicked(sf::RenderWindow& window, sf::Event& event) {
         if (!isActive) return false;
         if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
