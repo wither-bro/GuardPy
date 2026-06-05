@@ -1,0 +1,34 @@
+#include <SFML/Graphics.hpp>
+#include <string>
+
+class InfoText {
+private:
+    sf::Font font;
+    sf::Text text;
+
+public:
+    InfoText(const std::string& fontPath, unsigned int size, float maxWidth) {
+        font.loadFromFile(fontPath);
+        
+        text.setFont(font);
+        text.setCharacterSize(size);
+        text.setFillColor(sf::Color::White);
+        text.setPosition(20.0f, 80.0f);
+        
+        std::string content = "Hi! GuardPy is a tool for online.\n"
+                              "Mainly written in Go, Zig.\n"
+                              "Tools and online are written in Go, Zig, C++.\n"
+                              "Encryption is handled by C++ and Java.\n"
+                              "GuardPy includes a built-in chat for communication.\n"
+                              "Text rendering is performed on our servers,\n"
+                              "keeping your device secure.\n"
+                              "You can get an API token for chat or online use.\n"
+                              "Press 'Go!' to start configuration.";
+        
+        text.setString(content);
+    }
+
+    void draw(sf::RenderWindow& window) {
+        window.draw(text);
+    }
+};
