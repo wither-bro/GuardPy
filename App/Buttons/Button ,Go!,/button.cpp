@@ -1,34 +1,39 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
 
-class ButtonGo {
+class CreateAccountPage {
 private:
-    sf::RectangleShape buttonBody;
+    sf::RectangleShape inputField;
+    sf::Text header;
+    sf::Text prompt;
     sf::Font font;
-    sf::Text buttonText;
 
 public:
-    ButtonGo(const std::string& fontPath, float x, float y) {
+    CreateAccountPage(const std::string& fontPath) {
         font.loadFromFile(fontPath);
 
-        buttonBody.setSize({150.f, 50.f});
-        buttonBody.setOrigin(75.f, 25.f);
-        buttonBody.setPosition(x, y);
-        buttonBody.setFillColor(sf::Color(128, 0, 128));
-        buttonBody.setOutlineThickness(2.f);
-        buttonBody.setOutlineColor(sf::Color(0, 0, 0, 100));
+        header.setFont(font);
+        header.setString("Create Account");
+        header.setCharacterSize(30);
+        header.setFillColor(sf::Color::White);
+        header.setPosition(20.f, 20.f);
 
-        buttonText.setFont(font);
-        buttonText.setString("Go!");
-        buttonText.setCharacterSize(24);
-        buttonText.setFillColor(sf::Color::White);
+        prompt.setFont(font);
+        prompt.setString("Enter your username:");
+        prompt.setCharacterSize(18);
+        prompt.setFillColor(sf::Color::White);
+        prompt.setPosition(20.f, 80.f);
 
-        sf::FloatRect textRect = buttonText.getLocalBounds();
-        buttonText.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
-        buttonText.setPosition(x, y - 5.f);
+        inputField.setSize({300.f, 40.f});
+        inputField.setFillColor(sf::Color(40, 0, 80));
+        inputField.setOutlineThickness(1.f);
+        inputField.setOutlineColor(sf::Color::White);
+        inputField.setPosition(20.f, 110.f);
     }
 
     void draw(sf::RenderWindow& window) {
-        window.draw(buttonBody);
-        window.draw(buttonText);
+        window.draw(header);
+        window.draw(prompt);
+        window.draw(inputField);
     }
 };
