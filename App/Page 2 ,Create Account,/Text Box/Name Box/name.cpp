@@ -4,11 +4,13 @@
 class NameBox {
 private:
     sf::RectangleShape box;
+    sf::RectangleShape errorBorder;
     sf::Font font;
     sf::Text text;
     std::string input;
     std::string placeholder = "Enter your username";
     bool isFocused = false;
+    bool hasError = false;
 
 public:
     NameBox(const std::string& fontPath, float x, float y) {
@@ -20,11 +22,21 @@ public:
         box.setOutlineThickness(1.f);
         box.setOutlineColor(sf::Color::White);
 
+        errorBorder.setSize({302.f, 42.f});
+        errorBorder.setPosition(x - 1.f, y - 1.f);
+        errorBorder.setFillColor(sf::Color::Transparent);
+        errorBorder.setOutlineThickness(2.f);
+        errorBorder.setOutlineColor(sf::Color::Red);
+
         text.setFont(font);
         text.setCharacterSize(20);
         text.setPosition(x + 10.f, y + 8.f);
         text.setFillColor(sf::Color(150, 150, 150));
         text.setString(placeholder);
+    }
+
+    void validate() {
+        hasError = input.empty();
     }
 
     void handleEvent(sf::Event& event, sf::RenderWindow& window) {
@@ -52,10 +64,17 @@ public:
 
     void draw(sf::RenderWindow& window) {
         window.draw(box);
+        if (hasError) {
+            window.draw(errorBorder);
+        }
         window.draw(text);
     }
 
     std::string getName() const {
         return input;
+    }
+
+    bool getErrorStatus() const {
+        return hasError;
     }
 };
