@@ -61,4 +61,8 @@ public:
         window.draw(box);
         window.draw(text);
     }
+
+    std::string getPass() const {
+        return input;
+    }
 };
