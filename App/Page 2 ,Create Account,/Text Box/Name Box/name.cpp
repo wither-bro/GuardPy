@@ -54,4 +54,8 @@ public:
         window.draw(box);
         window.draw(text);
     }
+
+    std::string getName() const {
+        return input;
+    }
 };
