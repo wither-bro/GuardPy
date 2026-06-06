@@ -1,6 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 
+struct UserSession {
+    static std::string username;
+};
+std::string UserSession::username = "User";
+
 class Hello {
 private:
     sf::Text greetingText;
@@ -11,11 +16,11 @@ private:
     float moveSpeed = 300.f;
 
 public:
-    Hello(const std::string& fontPath, const std::string& name) {
+    Hello(const std::string& fontPath) {
         font.loadFromFile(fontPath);
         
         greetingText.setFont(font);
-        greetingText.setString("Hello " + name + "!");
+        greetingText.setString("Hello " + UserSession::username + "!");
         greetingText.setCharacterSize(60);
         greetingText.setFillColor(sf::Color::White);
         
