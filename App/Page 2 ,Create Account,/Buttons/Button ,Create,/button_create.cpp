@@ -38,9 +38,9 @@ public:
         }
     }
 
-    void press() {
+    void press(int& currentPage) {
         if (isActive) {
-            
+            currentPage = 3;
         }
     }
 
@@ -51,6 +51,10 @@ public:
             return buttonBody.getGlobalBounds().contains(mousePos);
         }
         return false;
+    }
+
+    bool isEnterPressed(sf::Event& event) {
+        return (isActive && event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Enter);
     }
 
     void draw(sf::RenderWindow& window) {
