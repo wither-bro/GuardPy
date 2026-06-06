@@ -17,7 +17,7 @@ public:
 
         sf::FloatRect textRect = messageText.getLocalBounds();
         messageText.setOrigin(textRect.width / 2.0f, textRect.height / 2.0f);
-        messageText.setPosition(400.f, 300.f);
+        messageText.setPosition(400.f, 150.f);
     }
 
     void draw(sf::RenderWindow& window) {
