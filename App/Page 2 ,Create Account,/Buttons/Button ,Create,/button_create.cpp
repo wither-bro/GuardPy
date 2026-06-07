@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
-#include "../../../Text Box/Name Box/name.cpp"
-#include "../../../Text Box/Password Box/password.cpp"
+#include "/workspaces/GuardPy/App/Page 2 ,Create Account,/Text Box/Name Box/name.cpp"
+#include "../../Text Box/Password Box/password.cpp"
 
 class ButtonCreate {
 private:

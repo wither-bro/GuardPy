@@ -1,7 +1,25 @@
 #include "ApiKeysManager.h"
-#include "CreateNewApiKey.cpp"
-#include "CopyApiKey.cpp"
+#include "create_new_api_key.cpp"
+#include "copy_api_key.cpp"
 #include <algorithm>
+
+class ApiKeysMenu {
+public:
+    void OnRender(sf::RenderWindow& window);
+    void RenderKeyList(sf::RenderWindow& window);
+    void HandleAddNewKey();
+};
+
+static sf::Font g_apiKeysFont;
+static CopyApiKey copier(g_apiKeysFont);
+
+void DrawBackgroundPanel() {}
+void DrawHeader(const std::string&) {}
+bool Button(const std::string&) { return false; }
+void RenderStatusFooter() {}
+bool DrawRow(const std::string&, const std::string&, const std::string&, bool) { return false; }
+bool ActionButtons(const ApiKeyInfo&) { return false; }
+bool IsRowClicked(const ApiKeyInfo&) { return false; }
 
 void ApiKeysMenu::OnRender(sf::RenderWindow& window) {
     DrawBackgroundPanel(); 

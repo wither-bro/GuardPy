@@ -1,0 +1,1 @@
+ "/workspaces/GuardPy/sfml-windows/SFML-2.6.2/lib/libsfml-graphics-d.a" "/workspaces/GuardPy/sfml-windows/SFML-2.6.2/lib/libsfml-window-d.a" "/workspaces/GuardPy/sfml-windows/SFML-2.6.2/lib/libsfml-system-d.a" -lws2_32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

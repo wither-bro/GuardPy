@@ -1,4 +1,6 @@
 #include "ApiKeysManager.h"
+#include "ApiKeysLogic.h"
+#include "create_new_api_key.cpp"
 
 bool ApiKeysLogic::HasActiveKeys() {
     auto& manager = ApiKeysManager::GetInstance();
@@ -34,4 +36,9 @@ void ApiKeysLogic::RefreshStates() {
             key.isActive = false;
         }
     }
+}
+
+void ApiKeysLogic::CreateInitialKey(bool withChat) {
+    CreateNewApiKey creator;
+    creator.Execute();
 }
