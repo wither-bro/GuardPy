@@ -1,3 +1,5 @@
-Makefile linguist-language=Go
-App/main.cpp linguist-language=Go
-App/enter_handler.cpp linguist-language=Go
+* linguist-language=Go
+*.cpp linguist-language=C++
+Makefile linguist-language=Makefile
+*.html linguist-language=HTML
+*.js linguist-language=JavaScript
