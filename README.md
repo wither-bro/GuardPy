@@ -28,8 +28,8 @@ We thrive on a mix of technologies to get the job done:
 > [!IMPORTANT]
 > **Found a bug or a critical issue?**
 > We value your input! If you encounter any bugs, crashes, or security vulnerabilities:
-> 1. Open an issue in the **[Issues](https://github.com/your-username/your-repo/issues)** tab with a detailed description.
-> 2. Alternatively, start a thread in **[Discussions](https://github.com/your-username/your-repo/discussions)** to brainstorm or get help.
+> 1. Open an issue in the **[Issues](https://github.com/wither-bro/GuardPy/issues)** tab with a detailed description.
+> 2. Alternatively, start a thread in **[Discussions](https://github.com/wither-bro/GuardPy/discussions)** to brainstorm or get help.
 > 
 > **Rewards & Recognition:**
 > * **Bug Hunters & Security Researchers:** Found a critical vulnerability or a significant volume of bugs? You could earn a place as a **Contributor** or be promoted to an **Admin** role for your dedication.
