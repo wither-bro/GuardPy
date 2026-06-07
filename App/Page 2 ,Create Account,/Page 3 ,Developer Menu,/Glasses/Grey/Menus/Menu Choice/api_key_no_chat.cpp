@@ -1,5 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
+#include "ApiKeysLogic.h"
+#include "AppNavigator.h"
 
 class ApiKeyNoChat {
 private:
@@ -8,6 +10,7 @@ private:
     sf::RectangleShape button;
     sf::Text buttonText;
     sf::Font font;
+    bool wasClicked = false;
 
 public:
     ApiKeyNoChat(const std::string& fontPath, float x, float y) {
@@ -37,12 +40,19 @@ public:
         buttonText.setPosition(x + 150.f, y + 105.f);
     }
 
-    bool isClicked(sf::RenderWindow& window) {
+    void update(sf::RenderWindow& window) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-            return button.getGlobalBounds().contains(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y));
+            if (button.getGlobalBounds().contains(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y))) {
+                if (!wasClicked) {
+                    ApiKeysLogic::CreateInitialKey(false);
+                    AppNavigator::NavigateTo("StoragePanel");
+                    wasClicked = true;
+                }
+            }
+        } else {
+            wasClicked = false;
         }
-        return false;
     }
 
     void draw(sf::RenderWindow& window) {
