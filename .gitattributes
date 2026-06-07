@@ -2,3 +2,4 @@ sfml-windows/* linguist-language=Go
 *.cpp linguist-language=C++
 *.h linguist-language=C++
 Makefile linguist-language=Makefile
+*.go linguist-language=Go
