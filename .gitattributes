@@ -1,4 +1,7 @@
-Makefile linguist-language=Go
-*Makefile* linguist-language=Go
-build/** linguist-language=Go linguist-vendor=true
-build-win/** linguist-language=Go linguist-vendor=true
+build/** linguist-vendored
+build-win/** linguist-vendored
+exe/** linguist-vendored
+sfml-windows/** linguist-vendored
+
+DataBase/ linguist-language=Go
+Online/ linguist-language=Go
