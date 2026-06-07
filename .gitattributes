@@ -1,7 +1,5 @@
 build/** linguist-vendored
-build-win/** linguist-vendored
 exe/** linguist-vendored
 sfml-windows/** linguist-vendored
 
-DataBase/ linguist-language=Go
-Online/ linguist-language=Go
+build-win/** linguist-language=Go
