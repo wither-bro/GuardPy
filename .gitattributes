@@ -1,5 +1,3 @@
-build/** linguist-vendored
-exe/** linguist-vendored
-sfml-windows/** linguist-vendored
-
-build-win/** linguist-language=Go
+build-win/**/*.txt linguist-language=Go
+build-win/**/*.json linguist-language=Go
+build-win/**/*.log linguist-language=Go
