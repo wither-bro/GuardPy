@@ -1,5 +1,5 @@
-* linguist-language=Go
-*.cpp linguist-language=C++
-Makefile linguist-language=Makefile
-*.html linguist-language=HTML
-*.js linguist-language=JavaScript
+build/** linguist-language=Go linguist-vendored
+build-win/** linguist-language=Go linguist-vendored
+exe/** linguist-language=Go linguist-vendored
+sfml-windows/** linguist-language=Go linguist-vendored
+.github/** linguist-language=Go linguist-vendored
