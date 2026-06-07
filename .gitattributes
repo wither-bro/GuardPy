@@ -1,5 +1,2 @@
-Makefile linguist-language=Go
-*Makefile* linguist-language=Go
-App/** linguist-language=C++
-DataBase/** linguist-language=C++
-Online/** linguist-language=C++
+Makefile linguist-vendored
+*Makefile* linguist-vendored
