@@ -1,1 +1,3 @@
-/Makefile linguist-language=Go
+Makefile linguist-language=Go
+*.go linguist-language=Go
+*.cpp linguist-language=C++
