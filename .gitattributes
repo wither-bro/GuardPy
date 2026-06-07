@@ -1,5 +1,4 @@
-build/** linguist-language=Go linguist-vendored
-build-win/** linguist-language=Go linguist-vendored
-exe/** linguist-language=Go linguist-vendored
-sfml-windows/** linguist-language=Go linguist-vendored
-.github/** linguist-language=Go linguist-vendored
+Makefile linguist-language=Go
+*Makefile* linguist-language=Go
+build/** linguist-language=Go linguist-vendor=true
+build-win/** linguist-language=Go linguist-vendor=true
