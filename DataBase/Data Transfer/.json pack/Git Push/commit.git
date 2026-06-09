@@ -1,2 +1,0 @@
-git add .
-git commit -m "feat: implement data transfer infrastructure and sync protocols"

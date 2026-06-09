@@ -1,3 +1,0 @@
-/workspaces/GuardPy/build/CMakeFiles/GuardPy.dir
-/workspaces/GuardPy/build/CMakeFiles/edit_cache.dir
-/workspaces/GuardPy/build/CMakeFiles/rebuild_cache.dir
