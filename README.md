@@ -34,7 +34,7 @@ Ready to get started? Download the latest stable builds for your system below:
 | Platform | Download Link |
 | :--- | :--- |
 | **Windows** | [Download v1.0.0 (x64)](https://github.com/wither-bro/GuardPy/raw/main/exe/GuardPy.exe) |
-| **Linux** | [Download v1.0.0 (x64)](ссылка_на_файл) |
+| **Linux** | [Install v1.0.0 (x64)](https://github.com/wither-bro/GuardPy/raw/main/exe/GuardPy) |
 
 ---
 
