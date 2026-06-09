@@ -1,0 +1,23 @@
+{
+  "transfer_node_meta": {
+    "version": "1.0.0",
+    "mode": "asynchronous_stream",
+    "root_directory": "Data Transfer/"
+  },
+  "inducle_map": {
+    "active_indices": [
+      {
+        "index_id": "core_transfer_01",
+        "status": "watching",
+        "path_to_watch": "Data Transfer/Outgoing/",
+        "last_update_ts": "2026-06-04T22:40:00Z"
+      }
+    ],
+    "collision_policy": "overwrite",
+    "batch_processing_enabled": true
+  },
+  "runtime_config": {
+    "buffer_limit_mb": 256,
+    "priority_queue": "high"
+  }
+}

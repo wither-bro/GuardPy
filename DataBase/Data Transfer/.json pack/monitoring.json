@@ -1,0 +1,23 @@
+{
+  "monitoring_meta": {
+    "module": "DataTransfer_Sentinel",
+    "scan_frequency_ms": 100,
+    "log_level": "verbose"
+  },
+  "metrics": {
+    "active_workers": 4,
+    "pending_operations": 12,
+    "throughput_bytes_sec": 4096,
+    "total_processed_files": 12408
+  },
+  "health_status": {
+    "system_state": "nominal",
+    "last_check": "2026-06-04T22:45:05Z",
+    "critical_warnings": [],
+    "bottleneck_detected": false
+  },
+  "alerts": {
+    "threshold_files_limit": 5000,
+    "notify_on_fail": true
+  }
+}

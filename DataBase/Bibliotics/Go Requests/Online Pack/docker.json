@@ -1,0 +1,28 @@
+{
+  "container_name": "guardpy-shark-engine",
+  "version": "1.0.0",
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  },
+  "environment": {
+    "APP_ENV": "production",
+    "API_BASE_URL": "https://api.guardpy.com/v1",
+    "RETRY_LIMIT": 3,
+    "LOG_LEVEL": "info"
+  },
+  "resources": {
+    "memory_limit": "256M",
+    "cpu_shares": 512
+  },
+  "health_check": {
+    "test": ["CMD", "curl", "-f", "http://localhost:8080/health"],
+    "interval": "30s",
+    "timeout": "10s",
+    "retries": 3
+  },
+  "volumes": [
+    "./config:/app/config",
+    "./logs:/app/logs"
+  ]
+}
